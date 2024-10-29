@@ -1,0 +1,107 @@
+/* Generell styling for hele applikasjonen */
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+/* Styling for kandidatene */
+.candidate {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.increase-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.increase-button:hover {
+  background-color: #0056b3;
+}
+
+.decrease-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.decrease-button:hover {
+  background-color: #c82333;
+}
+
+.remove-button {
+  background-color: #ffc107;
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #e0a800;
+}
+
+.edit-button {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #138496;
+}
+
+/* Historikk */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #f8f9fa;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
