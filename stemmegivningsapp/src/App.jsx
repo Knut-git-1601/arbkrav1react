@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Option from "./option"; // Importer Option-komponenten
-import "./App.css"; // Importer stilene fra CSS-filen
+import Option from "./Option";
+import "./App.css";
 
 function App() {
-  const [candidates, setCandidates] = useState([]); // Tilstand for kandidater
-  const [totalVotes, setTotalVotes] = useState(0); // Totalt stemmer
-  const [search, setSearch] = useState(""); // Tilstand for søk
-  const [history, setHistory] = useState([]); // Tilstand for stemmehistorikk
+  const [candidates, setCandidates] = useState([]);
+  const [totalVotes, setTotalVotes] = useState(0);
+  const [search, setSearch] = useState("");
+  const [history, setHistory] = useState([]);
 
   const addCandidate = (name) => {
     if (name) {
@@ -18,10 +18,9 @@ function App() {
   };
 
   const removeCandidate = (index) => {
-    // Fjern kandidat
-    const newCandidates = candidates.filter((_, i) => i !== index); // Filtrer ut kandidaten som skal fjernes
-    setCandidates(newCandidates); // Oppdater kandidatene
-    const candidateVotes = candidates[index].votes; // Antall stemmer kandidaten har
+    const newCandidates = candidates.filter((_, i) => i !== index);
+    setCandidates(newCandidates);
+    const candidateVotes = candidates[index].votes;
     setTotalVotes(totalVotes - candidateVotes);
     const newHistory = history.filter(
       (item) => item.name !== candidates[index].name
@@ -31,15 +30,16 @@ function App() {
 
   const handleVote = (index, amount) => {
     const newCandidates = [...candidates];
-    newCandidates[index].votes += amount;
-    setCandidates(newCandidates);
-    setTotalVotes(totalVotes + amount);
-
-    // Oppdater historikk
-    setHistory([
-      ...history,
-      { name: newCandidates[index].name, votes: amount },
-    ]);
+    if (newCandidates[index].votes + amount >= 0) {
+      // Hindrer negative stemmer
+      newCandidates[index].votes += amount;
+      setCandidates(newCandidates);
+      setTotalVotes(totalVotes + amount);
+      setHistory([
+        ...history,
+        { name: newCandidates[index].name, votes: amount },
+      ]);
+    }
   };
 
   const editCandidateName = (index) => {
@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>StemmegivningsApp kommunevalg</h1>
+      <h1>Stemmegivningsapp</h1>
       <input
         className="search-bar"
         type="text"

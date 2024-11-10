@@ -1,8 +1,7 @@
-/* Generell styling for hele applikasjonen */
-.app-container {
+.app-container { /* Ny klasse for å style hovedcontaineren*/
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Lys bakgrunn for bedre kontrast */
   max-width: 600px;
   margin: 0 auto;
   border: 1px solid #ddd;
@@ -34,9 +33,8 @@ h1 {
   background-color: #218838;
 }
 
-/* Styling for kandidatene */
 .candidate {
-  background-color: white;
+  background-color: #f9f9f9; /* Lysere bakgrunn for bedre kontrast */
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -56,43 +54,42 @@ button {
   border: none;
 }
 
-.increase-button {
-  background-color: #007bff;
-  color: white;
+.increase-button { /* Ny klasse for å style knappene */
+  background-color: #007bff; /* Blå farge for økt kontrast */
+  color: white; /* Hvit tekst for økt kontrast */
 }
 
-.increase-button:hover {
-  background-color: #0056b3;
+.increase-button:hover { /* Ny klasse for å style hover-effekten */
+  background-color: #0056b3; /* Mørkere blå farge for økt kontrast */
 }
 
 .decrease-button {
-  background-color: #dc3545;
-  color: white;
+  background-color: #dc3545; /* Rød farge for økt kontrast */
+  color: white; /* Hvit tekst for økt kontrast */
 }
 
-.decrease-button:hover {
-  background-color: #c82333;
+.decrease-button:hover { /* Ny klasse for å style hover-effekten */
+  background-color: #c82333; /* Mørkere rød farge for økt kontrast */
 }
 
-.remove-button {
-  background-color: #ffc107;
-  color: white;
+.remove-button { /* Ny klasse for å style knappene */
+  background-color: #ffc107; /* Gul farge for økt kontrast */
+  color: white; /* Hvit tekst for økt kontrast */
 }
 
-.remove-button:hover {
-  background-color: #e0a800;
+.remove-button:hover { /* Ny klasse for å style hover-effekten */
+  background-color: #e0a800; /* Mørkere gul farge for økt kontrast */
 }
 
-.edit-button {
-  background-color: #17a2b8;
-  color: white;
+.edit-button { /* Ny klasse for å style knappene */
+  background-color: #17a2b8; /* Blå farge for økt kontrast */
+  color: white; /* Hvit tekst for økt kontrast */
 }
 
-.edit-button:hover {
-  background-color: #138496;
+.edit-button:hover { /* Ny klasse for å style hover-effekten */
+  background-color: #138496; /* Mørkere blå farge for økt kontrast */
 }
 
-/* Historikk */
 ul {
   list-style-type: none;
   padding-left: 0;
